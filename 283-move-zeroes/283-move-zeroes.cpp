@@ -1,8 +1,9 @@
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
+        
+        //Extra space solution//
       vector<int>temp;
-        int c0=0;
         for(int i=0; i<nums.size(); i++)
         {
             if(nums[i] !=0)
@@ -17,6 +18,7 @@ public:
             temp.push_back(0);
         }
         nums = temp;
+        //Extra space solution ends//
         
  
         
