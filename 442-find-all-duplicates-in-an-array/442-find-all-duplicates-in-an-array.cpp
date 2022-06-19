@@ -4,22 +4,31 @@ public:
         vector<int>ans;
         
         
-//         unordered_map<int>m;
+        unordered_set<int>m;
         
-//         for(int i =0; i<nums.size(); i++)
-//         {
-//             if(m.finds)
-//         }
-    
-        sort(nums.begin(), nums.end());
-        for(int i=1; i<nums.size(); i++)
+        for(int i =0; i<nums.size(); i++)
         {
-            if(nums[i] == nums[i-1])
+            if(m.find(nums[i]) != m.end())
             {
                 ans.push_back(nums[i]);
             }
-         
+            else
+            {
+                m.insert(nums[i]);
+            }
         }
-      return ans;
+    return ans;
+        
+        //2nd approch
+//         sort(nums.begin(), nums.end());
+//         for(int i=1; i<nums.size(); i++)
+//         {
+//             if(nums[i] == nums[i-1])
+//             {
+//                 ans.push_back(nums[i]);
+//             }
+         
+//         }
+//       return ans;
     }
 };
