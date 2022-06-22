@@ -15,23 +15,37 @@ public:
         
         //Naive Approach
         
-        int size =0;
+//         int size =0;
         
-        ListNode* temp = head; 
+//         ListNode* temp = head; 
         
         
-        while(temp)
-        {
-            size++;
-            temp = temp->next;
-        }
+//         while(temp)
+//         {
+//             size++;
+//             temp = temp->next;
+//         }
         
-        temp = head;
+//         temp = head;
         
-        for(int i = 0; i < size / 2; i++) {
-        		temp = temp->next;
-    	}
+//         for(int i = 0; i < size / 2; i++) {
+//         		temp = temp->next;
+//     	}
    	 
-    	return temp;
+//     	return temp;
+        
+        //OPTIMAL 
+        
+        ListNode *slow= head, *fast=head;
+        
+        while(fast && fast->next)
+        {
+            slow = slow->next;
+            fast = fast->next->next;
+            
+        }
+        return slow;
+        
+        
     }
 };
