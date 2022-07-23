@@ -18,11 +18,13 @@ public:
             {
                 if (target < nums[mid] && target >= nums[low])
                 {
-                    high = mid-1;
+                  
+                    high =mid-1;
                 }
                 else
                 {
-                    low =mid+1;
+                      low = mid+1;
+                    
                 }
             }
            if(nums[mid]<=nums[high])
