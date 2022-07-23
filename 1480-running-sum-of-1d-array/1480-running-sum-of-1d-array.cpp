@@ -9,13 +9,10 @@ public:
         {
          
           nums[i]= nums[i]+nums[i-1];
+            ans.push_back(nums[i]);
             
             
         }
-          for(int i=1; i<nums.size();i++)
-          {
-              ans.push_back(nums[i]);
-          }
         return ans;
     }
 };
