@@ -12,24 +12,20 @@ public:
         
         vector<vector<int>>ans(r,vector<int>(c,0));
         
-       int row_num = 0;
-        int col_num = 0;
+        int a=0;
+        int b=0;
         
-        for(int i = 0; i < row; i++)
+        for(int i=0; i<row; i++)
         {
-            for(int j = 0; j < col; j++)
+            for(int j=0; j<col; j++)
             {
-                // filling up ans column wise first
-                ans[row_num][col_num] = mat[i][j];
-                col_num++;
-                // if column is fulfilled
-                if(col_num == c)
-                {
-                    // going to the next row
-                      row_num++;
-                    // starting from first column
-                    col_num = 0;
-                  
+                ans[a][b]= mat[i][j];
+                b++;
+                
+                
+                if(b ==c){
+                    a++;
+                    b=0;
                 }
             }
         }
