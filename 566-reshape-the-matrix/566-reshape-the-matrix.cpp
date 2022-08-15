@@ -1,17 +1,18 @@
 class Solution {
 public:
     vector<vector<int>> matrixReshape(vector<vector<int>>& mat, int r, int c) {
-        // rows and columns of given matrix 
+        
         int row = mat.size();
         int col = mat[0].size();
         
-        // condition for reshaping possible or not
         if((row*col) != (r*c))
         {
             return mat;
         }
-        vector<vector<int>> ans(r, vector<int>(c,0));
-        int row_num = 0;
+        
+        vector<vector<int>>ans(r,vector<int>(c,0));
+        
+       int row_num = 0;
         int col_num = 0;
         
         for(int i = 0; i < row; i++)
@@ -33,6 +34,5 @@ public:
             }
         }
         return ans;
-        
     }
 };
