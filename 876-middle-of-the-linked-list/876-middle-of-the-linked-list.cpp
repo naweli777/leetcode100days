@@ -12,39 +12,30 @@ class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
         
-        
-        //Naive Approach
-        
-//         int size =0;
-        
-//         ListNode* temp = head; 
-        
-        
-//         while(temp)
-//         {
-//             size++;
-//             temp = temp->next;
-//         }
-        
-//         temp = head;
-        
-//         for(int i = 0; i < size / 2; i++) {
-//         		temp = temp->next;
-//     	}
-   	 
-//     	return temp;
+        int size =0;
+        ListNode* temp = head; 
+        while(temp)
+        {
+            size++;
+            temp = temp->next;
+        }
+        temp = head;
+        for(int i = 0; i <size / 2 ; i++) {
+        		temp = temp->next;
+    	}
+    	return temp;
         
         //OPTIMAL 
         
-        ListNode *slow= head, *fast=head;
+//         ListNode *slow= head, *fast=head;
         
-        while(fast && fast->next)
-        {
-            slow = slow->next;
-            fast = fast->next->next;
+//         while(fast && fast->next)
+//         {
+//             slow = slow->next;
+//             fast = fast->next->next;
             
-        }
-        return slow;
+//         }
+//         return slow;
         
         
     }
