@@ -6,6 +6,11 @@ public:
         int r= ransomNote.size();
         int s= magazine.size();
         
+        if(s<r)
+        {
+            return false;
+        }
+        
         for(int i=0; i<s;i++){
             mp[magazine[i]]++;
         }
